@@ -26,27 +26,27 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_rounded_input_field" />
 
-        <TextView
-            android:id="@+id/text_dummy_hint_username"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/white"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:text="@string/email_hint"
-            android:textSize="16sp"
-            android:visibility="invisible" />
+<!--        <TextView-->
+<!--            android:id="@+id/text_dummy_hint_username"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            android:paddingLeft="4dp"-->
+<!--            android:paddingRight="4dp"-->
+<!--            android:text="@string/email_hint"-->
+<!--            android:textSize="16sp"-->
+<!--            android:visibility="invisible" />-->
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:hint="@string/email_hint"
-            android:textColorHint="@android:color/darker_gray"
-            app:hintTextAppearance="@style/HintTextStyle">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            android:hint="@string/email_hint"-->
+<!--            android:textColorHint="@android:color/darker_gray"-->
+<!--            app:hintTextAppearance="@style/HintTextStyle">-->
 
             <EditText
                 android:id="@+id/fieldEmail"
@@ -55,7 +55,7 @@
                 android:backgroundTint="@android:color/transparent"
                 android:inputType="text|textCapWords"
                 android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
     </RelativeLayout>
     <!-- Password -->
     <RelativeLayout
@@ -73,28 +73,28 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_rounded_input_field" />
 
-        <TextView
-            android:id="@+id/text_dummy_hint_password"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/white"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:text="Password"
-            android:textSize="16sp"
-            android:visibility="invisible" />
+<!--        <TextView-->
+<!--            android:id="@+id/text_dummy_hint_password"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            android:paddingLeft="4dp"-->
+<!--            android:paddingRight="4dp"-->
+<!--            android:text="Password"-->
+<!--            android:textSize="16sp"-->
+<!--            android:visibility="invisible" />-->
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:hint="@string/password_hint"
-            android:textColorHint="@android:color/darker_gray"
-            app:hintTextAppearance="@style/HintTextStyle"
-            app:passwordToggleEnabled="true">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            android:hint="@string/password_hint"-->
+<!--            android:textColorHint="@android:color/darker_gray"-->
+<!--            app:hintTextAppearance="@style/HintTextStyle"-->
+<!--            app:passwordToggleEnabled="true">-->
 
             <EditText
                 android:id="@+id/fieldPassword"
@@ -103,7 +103,7 @@
                 android:backgroundTint="@android:color/transparent"
                 android:inputType="textPassword"
                 android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
     </RelativeLayout>
 
 
