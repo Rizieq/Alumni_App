@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlumniApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.RegisterActivity"></activity>
+        <activity android:name=".ui.HomeActivity"></activity>
+        <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

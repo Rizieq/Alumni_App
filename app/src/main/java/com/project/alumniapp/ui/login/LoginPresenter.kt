@@ -30,7 +30,7 @@ class LoginPresenter(model: LoginContract.View):LoginContract.Presenter {
                 ) {
 
                     if (response?.body() != null){
-                        view?.showLoginSuccess(response.message().toString())
+                        view?.showLoginSuccess(response.body()!!)
                         Log.d("ERROR_ONRESPONSE_BODY",response.message())
                     } else{
                         view?.showError(response.message().toString())

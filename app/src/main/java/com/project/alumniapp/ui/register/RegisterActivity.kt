@@ -1,4 +1,4 @@
-package com.project.alumniapp.ui
+package com.project.alumniapp.ui.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
