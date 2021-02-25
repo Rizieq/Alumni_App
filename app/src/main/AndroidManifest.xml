@@ -11,13 +11,16 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AlumniApp">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.profile.ProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.HomeActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ui.register.RegisterActivity"/>
     </application>
 
 </manifest>

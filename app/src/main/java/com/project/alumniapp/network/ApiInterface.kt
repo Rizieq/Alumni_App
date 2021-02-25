@@ -2,10 +2,9 @@ package com.project.alumniapp.network
 
 import com.project.alumniapp.model.ResponseLogin
 import com.project.alumniapp.model.ResponseRegister
+import com.project.alumniapp.model.ResponseUser
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiInterface {
 
@@ -25,4 +24,11 @@ interface ApiInterface {
         @Field("address") address: String,
         @Field("name") name: String
     ): Call<ResponseRegister>
+
+    @GET("profile/user")
+    fun profile(
+        @Header("Authorization") token: String?
+    ): Call<ResponseUser>
+
+
 }
