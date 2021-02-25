@@ -134,30 +134,6 @@
         app:layout_constraintStart_toStartOf="@+id/relativeLayout3"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout3" />
 
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/linear1"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:gravity="center"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        tools:layout_editor_absoluteY="382dp">-->
-
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/titleLogin2"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginEnd="5dp"-->
-    <!--            android:text="@string/don_t_have_an_account" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/signUpText"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-
-    <!--            android:text="@string/create_account"-->
-    <!--            android:textColor="@color/colorPrimary" />-->
-    <!--    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

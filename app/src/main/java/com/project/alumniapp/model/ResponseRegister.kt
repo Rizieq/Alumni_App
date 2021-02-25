@@ -1,7 +1,9 @@
 package com.project.alumniapp.model
 
-data class ResponseRegister(
-	val message: String? = null,
-	val token: String? = null
-)
+import com.google.gson.annotations.SerializedName
 
+data class ResponseRegister(
+
+	@field:SerializedName("message")
+	val message: String? = null
+)
