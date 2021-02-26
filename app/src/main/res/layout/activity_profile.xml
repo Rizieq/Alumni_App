@@ -6,17 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
     <!-- Name -->
     <RelativeLayout
         android:id="@+id/relativeLayoutName"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <View
             android:layout_width="match_parent"
@@ -54,4 +62,210 @@
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
     </RelativeLayout>
+
+    <!-- email -->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutEmail"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutName"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayoutName"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayoutName">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_input_field" />
+
+        <TextView
+            android:id="@+id/text_dummy_hint_email"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/email_hint"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/email_hint"
+            android:textColorHint="@android:color/darker_gray"
+            app:hintTextAppearance="@style/HintTextStyle">
+
+            <EditText
+                android:id="@+id/fieldEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <!-- No Handphone -->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutNoHandPhone"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutEmail"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayoutEmail"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutEmail">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_input_field" />
+
+        <TextView
+            android:id="@+id/text_dummy_hint_no_handphone"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/no_handphone"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/no_handphone"
+            android:textColorHint="@android:color/darker_gray"
+            app:hintTextAppearance="@style/HintTextStyle">
+
+            <EditText
+                android:id="@+id/fieldNoHandphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <!-- password -->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPassword"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutNoHandPhone"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayoutNoHandPhone"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutNoHandPhone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_input_field" />
+
+        <TextView
+            android:id="@+id/text_dummy_hint_password"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/password_hint"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/password_hint"
+            android:textColorHint="@android:color/darker_gray"
+            app:hintTextAppearance="@style/HintTextStyle">
+
+            <EditText
+                android:id="@+id/fieldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <!-- Graduation Year -->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutGraduationYear"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutPassword"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayoutPassword"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutPassword">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_input_field" />
+
+        <TextView
+            android:id="@+id/text_dummy_hint_graduation_year"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/graduation_year"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/graduation_year"
+            android:textColorHint="@android:color/darker_gray"
+            app:hintTextAppearance="@style/HintTextStyle">
+
+            <EditText
+                android:id="@+id/fieldGraduationYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutGraduationYear"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayoutGraduationYear"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutGraduationYear" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ import retrofit2.Response
 class ProfilePresenter(model: ProfileContract.View) : ProfileContract.Presenter{
 
     var view: ProfileContract.View? = null
-    private var preferencesHelper: PreferencesHelper? = null
+
 
     init {
         view = model

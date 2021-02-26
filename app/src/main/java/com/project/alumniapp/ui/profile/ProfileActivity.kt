@@ -22,13 +22,11 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.View {
 
 
 
-        Log.d("RESULT_TOKEN","DATA_TEST")
-//        val token: String = Hawk.get("token")
-        profilePresenter.getProfile(" eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvdWppa29tLnBob2VuaXhjZW5kZWtpYS5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE2MTQyNjUzMDAsImV4cCI6MTYxNDI2ODkwMCwibmJmIjoxNjE0MjY1MzAwLCJqdGkiOiJQejR3M1Jpdko2aDJoRmdWIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.EAztfDumyOaJ8lc6cfaUepXLRt89Xr6o6yWDS9ym2iA")
+
+        val token: String = Hawk.get("token")
+        profilePresenter.getProfile("Bearer $token")
 
 
-
-//        txtTest.text = Hawk.get("token")
     }
 
     override fun showError(msg: String) {
@@ -36,6 +34,11 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.View {
     }
 
     override fun showLoginSuccess(data: ResponseUser) {
+        Log.d("RESULT_TOKEN","DATA_TEST")
         fieldName.setText(data.data?.name)
+        fieldEmail.setText(data.data?.email)
+        fieldNoHandphone.setText(data.data?.noHandphone)
+        fieldPassword.setText(data.data?.password)
+        fieldGraduationYear.setText(data.data?.tahunAlumni)
     }
 }

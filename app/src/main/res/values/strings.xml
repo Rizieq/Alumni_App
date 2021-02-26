@@ -8,4 +8,6 @@
     <string name="username">Username</string>
     <string name="address">Address</string>
     <string name="register">Register</string>
+    <string name="graduation_year">Graduation Year</string>
+    <string name="save">Save</string>
 </resources>

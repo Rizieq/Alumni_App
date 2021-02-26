@@ -1,5 +1,6 @@
 package com.project.alumniapp.network
 
+import com.project.alumniapp.model.ResponseAlumni
 import com.project.alumniapp.model.ResponseLogin
 import com.project.alumniapp.model.ResponseRegister
 import com.project.alumniapp.model.ResponseUser
@@ -29,6 +30,14 @@ interface ApiInterface {
     fun profile(
         @Header("Authorization") token: String?
     ): Call<ResponseUser>
+
+    @GET("profile/getallprofile")
+    fun listAlumni(
+        @Header("Authorization") token: String?
+    ): Call<ResponseAlumni>
+
+
+
 
 
 }
