@@ -41,7 +41,7 @@ import kotlinx.android.synthetic.main.activity_main.*
      override fun showLoginSuccess(msg: ResponseLogin?) {
          msg?.token?.let { preferencesHelper?.saveToken(it) }
          Hawk.put("token", msg?.token)
-         startActivity(Intent(this, ListAlumniActivity::class.java))
+         startActivity(Intent(this, ProfileActivity::class.java))
          finish()
      }
 

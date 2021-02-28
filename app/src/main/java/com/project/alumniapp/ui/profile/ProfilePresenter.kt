@@ -1,8 +1,10 @@
 package com.project.alumniapp.ui.profile
 
-import com.project.alumniapp.data.PreferencesHelper
 import com.project.alumniapp.model.ResponseUser
+import com.project.alumniapp.model.ResponseUserEdit
 import com.project.alumniapp.network.ApiClient
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,7 +31,7 @@ class ProfilePresenter(model: ProfileContract.View) : ProfileContract.Presenter{
                     ) {
                         if (response.body() != null){
                             val responseUser: ResponseUser = response.body()!!
-                            view?.showLoginSuccess(responseUser)
+                            view?.showGetProfileSuccess(responseUser)
                         } else {
                             view?.showError(response.message())
                         }
@@ -37,4 +39,6 @@ class ProfilePresenter(model: ProfileContract.View) : ProfileContract.Presenter{
 
                 })
     }
+
+
 }

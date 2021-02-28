@@ -10,4 +10,6 @@
     <string name="register">Register</string>
     <string name="graduation_year">Graduation Year</string>
     <string name="save">Save</string>
+    <string name="bio">Bio</string>
+    <string name="edit">Edit</string>
 </resources>

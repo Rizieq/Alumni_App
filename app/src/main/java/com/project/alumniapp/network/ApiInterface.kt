@@ -1,9 +1,8 @@
 package com.project.alumniapp.network
 
-import com.project.alumniapp.model.ResponseAlumni
-import com.project.alumniapp.model.ResponseLogin
-import com.project.alumniapp.model.ResponseRegister
-import com.project.alumniapp.model.ResponseUser
+import com.project.alumniapp.model.*
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -35,6 +34,16 @@ interface ApiInterface {
     fun listAlumni(
         @Header("Authorization") token: String?
     ): Call<ResponseAlumni>
+
+    @Multipart
+    @POST("profile/user/update?_method=PUT")
+    fun editProfile(
+        @Part image: MultipartBody.Part?,
+        @Part cv: MultipartBody.Part?,
+        @Part("bio") bio: RequestBody?,
+        @Part("tahun_alumni") tahun_alumni: RequestBody?,
+        @Header("Authorization") token: String?
+    ): Call<ResponseUserEdit>
 
 
 

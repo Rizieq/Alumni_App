@@ -7,8 +7,9 @@ import android.widget.Toast
 import com.orhanobut.hawk.Hawk
 import com.project.alumniapp.R
 import com.project.alumniapp.data.PreferencesHelper
-import com.project.alumniapp.model.Data
 import com.project.alumniapp.model.ResponseUser
+import com.project.alumniapp.model.ResponseUserEdit
+import com.project.alumniapp.ui.editProfile.BottomSheetEdit
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(),ProfileContract.View {
@@ -20,11 +21,14 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-
-
-
         val token: String = Hawk.get("token")
         profilePresenter.getProfile("Bearer $token")
+
+        editButton.setOnClickListener {
+            val bottomsheet: BottomSheetEdit =
+                BottomSheetEdit()
+            bottomsheet.show(supportFragmentManager,"bottomSheetEdit")
+        }
 
 
     }
@@ -33,7 +37,9 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.View {
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
     }
 
-    override fun showLoginSuccess(data: ResponseUser) {
+
+
+    override fun showGetProfileSuccess(data: ResponseUser) {
         Log.d("RESULT_TOKEN","DATA_TEST")
         fieldName.setText(data.data?.name)
         fieldEmail.setText(data.data?.email)
@@ -41,4 +47,6 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.View {
         fieldPassword.setText(data.data?.password)
         fieldGraduationYear.setText(data.data?.tahunAlumni)
     }
+
+
 }
