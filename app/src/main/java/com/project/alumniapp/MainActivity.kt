@@ -7,7 +7,7 @@ import android.widget.Toast
 import com.orhanobut.hawk.Hawk
 import com.project.alumniapp.data.PreferencesHelper
 import com.project.alumniapp.model.ResponseLogin
-import com.project.alumniapp.ui.HomeActivity
+import com.project.alumniapp.ui.home.HomeActivity
 import com.project.alumniapp.ui.login.LoginContract
 import com.project.alumniapp.ui.login.LoginPresenter
 import kotlinx.android.synthetic.main.activity_main.*

@@ -26,4 +26,5 @@
     <string name="add_posting">Add Posting</string>
     <string name="list_alumni">List Alumni</string>
     <string name="profile_user">Profile User</string>
+    <string name="post">Post</string>
 </resources>

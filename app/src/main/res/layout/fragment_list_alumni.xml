@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.listAlumni.ListAlumniFragment">
 
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/linear"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:layout_marginHorizontal="10dp"
+       android:orientation="horizontal">
+   <androidx.appcompat.widget.SearchView
+       android:id="@+id/search_view"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:background="@drawable/transparant_shape5dp"
+       android:layout_marginVertical="10dp"
+       app:queryHint="Search Alumni"
+       app:iconifiedByDefault="false"
+       app:queryBackground="@null"
+       app:actionViewClass="android.widget.SearchView"/>
+
+   <Button
+       android:id="@+id/sequence"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="2dp"
+       android:layout_marginVertical="10dp"
+       android:background="@drawable/ic_sequence"
+       android:layout_weight="10"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/rv_alumni"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+       android:layout_height="match_parent"
+       android:layout_below="@+id/linear"/>
 
-</FrameLayout>
+</RelativeLayout>
