@@ -34,17 +34,19 @@ class AdapterListAlumni(val context: Context, val listAlumni: List<DataItem>): R
         val imageCvAlumni = view.imgCvAlumni
         val imageProfileAlumni = view.imgProfileAlumni
         val tv_nama_alumni = view.tvNamaAlumni
+        val tv_graduation = view.tvGraduation
 
 
 
 
         fun bindItem(dataItem: DataItem) {
             tv_nama_alumni.text = dataItem.name
+            tv_graduation.text = dataItem.tahunAlumni
             Glide.with(itemView)
-                .load(dataItem.image)
+                .load("https://ujikom.phoenixcendekia.com/images/" + dataItem.image)
                 .into(imageProfileAlumni)
             Glide.with(itemView)
-                .load(dataItem.cv)
+                .load("https://ujikom.phoenixcendekia.com/cv/"+ dataItem.cv)
                 .into(imageCvAlumni)
         }
     }

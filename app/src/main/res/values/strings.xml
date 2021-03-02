@@ -12,4 +12,18 @@
     <string name="save">Save</string>
     <string name="bio">Bio</string>
     <string name="edit">Edit</string>
+    <string name="share_your_experience">Share Your Experience</string>
+    <string name="name_user">Name user</string>
+    <string name="bio_user">Bio User</string>
+    <string name="email">Email :</string>
+    <string name="no_phone">No Phone : </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_posting">Add Posting</string>
+    <string name="list_alumni">List Alumni</string>
+    <string name="profile_user">Profile User</string>
 </resources>

@@ -24,7 +24,7 @@ class RegisterPresenter(model: RegisterContract.View): RegisterContract.Presente
         name: String
     ) {
         val apiInterface = ApiClient.create()
-        apiInterface.register(email, no_handphone, password, address, name)
+        apiInterface.register(address, name, no_handphone, password, email)
             .enqueue(object : Callback<ResponseRegister>{
                 override fun onFailure(call: Call<ResponseRegister>, t: Throwable) {
                     view?.showError(t.message!!)

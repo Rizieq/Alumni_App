@@ -18,11 +18,11 @@ interface ApiInterface {
     @FormUrlEncoded
     @POST("register")
     fun register(
-        @Field("email") email: String,
+        @Field("address") address: String,
+        @Field("name") name: String,
         @Field("no_handphone") no_handphone: String,
         @Field("password") password: String,
-        @Field("address") address: String,
-        @Field("name") name: String
+        @Field("email") email: String
     ): Call<ResponseRegister>
 
     @GET("profile/user")

@@ -1,12 +1,11 @@
 package com.project.alumniapp.ui.register
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.project.alumniapp.MainActivity
 import com.project.alumniapp.R
-import com.project.alumniapp.ui.login.LoginPresenter
-import com.project.alumniapp.ui.register.RegisterContract
-import com.project.alumniapp.ui.register.RegisterPresenter
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity(), RegisterContract.View {
@@ -32,5 +31,6 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
 
     override fun showLoginSuccess(msg: String) {
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this,MainActivity::class.java))
     }
 }

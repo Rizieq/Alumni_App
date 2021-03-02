@@ -8,10 +8,8 @@ import com.orhanobut.hawk.Hawk
 import com.project.alumniapp.data.PreferencesHelper
 import com.project.alumniapp.model.ResponseLogin
 import com.project.alumniapp.ui.HomeActivity
-import com.project.alumniapp.ui.listAlumni.ListAlumniActivity
 import com.project.alumniapp.ui.login.LoginContract
 import com.project.alumniapp.ui.login.LoginPresenter
-import com.project.alumniapp.ui.profile.ProfileActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -41,7 +39,7 @@ import kotlinx.android.synthetic.main.activity_main.*
      override fun showLoginSuccess(msg: ResponseLogin?) {
          msg?.token?.let { preferencesHelper?.saveToken(it) }
          Hawk.put("token", msg?.token)
-         startActivity(Intent(this, ProfileActivity::class.java))
+         startActivity(Intent(this, HomeActivity::class.java))
          finish()
      }
 

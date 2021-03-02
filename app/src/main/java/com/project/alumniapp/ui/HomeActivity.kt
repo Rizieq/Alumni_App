@@ -1,22 +1,55 @@
 package com.project.alumniapp.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.orhanobut.hawk.Hawk
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.project.alumniapp.R
+import com.project.alumniapp.ui.listAlumni.ListAlumniFragment
+import com.project.alumniapp.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
 
 
+    private val mOnNavigationItemSelected = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when(item.itemId){
+            R.id.home -> {
+                replaceFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.addPost -> {
+                replaceFragment(AddFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.listAlumni -> {
+                replaceFragment(ListAlumniFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.profile -> {
+                replaceFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        Log.d("RESULT_TOKEN", Hawk.get("token"))
-        textView.text = Hawk.get("token")
+        bottomNavigation.setOnNavigationItemSelectedListener (mOnNavigationItemSelected)
+
+//        Log.d("RESULT_TOKEN", Hawk.get("token"))
+//        textView.text = Hawk.get("token")
 
     }
+
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentTrasaction = supportFragmentManager.beginTransaction()
+        fragmentTrasaction.replace(R.id.fragmentContainer, fragment)
+        fragmentTrasaction.commit()
+    }
+
 }

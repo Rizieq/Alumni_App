@@ -7,10 +7,11 @@
 
     <ImageView
         android:id="@+id/imgProfileAlumni"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,115 +23,56 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="#8BC34A"
         android:src="@drawable/ic_baseline_camera_alt_24"
         app:layout_constraintBottom_toBottomOf="@+id/imgProfileAlumni"
         app:layout_constraintEnd_toEndOf="@+id/imgProfileAlumni" />
 
-    <!-- Bio -->
-    <RelativeLayout
-        android:id="@+id/relativeLayoutBio"
-        android:layout_width="379dp"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="@+id/imgProfileAlumni"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfileAlumni" />
+
+    <EditText
+        android:id="@+id/fieldEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/imgProfileAlumni"
         app:layout_constraintStart_toStartOf="@+id/imgProfileAlumni"
-        app:layout_constraintTop_toBottomOf="@+id/imgProfileAlumni">
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_rounded_input_field" />
-
-        <TextView
-            android:id="@+id/text_dummy_hint_bio"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/white"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:text="@string/bio"
-            android:textSize="16sp"
-            android:visibility="invisible" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:hint="@string/bio"
-            android:textColorHint="@android:color/darker_gray"
-            app:hintTextAppearance="@style/HintTextStyle">
-
-            <EditText
-                android:id="@+id/fieldBio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </RelativeLayout>
-
-
-    <!-- Graduation Year -->
-    <RelativeLayout
-        android:id="@+id/relativeLayoutGraduationYear"
-        android:layout_width="379dp"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutBio"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayoutBio"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutBio">
+        android:text="@string/no_handphone"
+        app:layout_constraintStart_toStartOf="@+id/fieldEmail"
+        app:layout_constraintTop_toBottomOf="@+id/fieldEmail" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_rounded_input_field" />
-
-        <TextView
-            android:id="@+id/text_dummy_hint_graduation_year"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/white"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:text="@string/graduation_year"
-            android:textSize="16sp"
-            android:visibility="invisible" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:hint="@string/graduation_year"
-            android:textColorHint="@android:color/darker_gray"
-            app:hintTextAppearance="@style/HintTextStyle">
-
-            <EditText
-                android:id="@+id/fieldGraduationYear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/fieldNoHandphone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/fieldEmail"
+        app:layout_constraintStart_toStartOf="@+id/fieldEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
     <ImageView
         android:id="@+id/imgCvAlumni"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/relativeLayoutGraduationYear"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayoutGraduationYear"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutGraduationYear"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/fieldNoHandphone"
+        app:layout_constraintStart_toStartOf="@+id/fieldNoHandphone"
+        app:layout_constraintTop_toBottomOf="@+id/fieldNoHandphone"
         tools:srcCompat="@tools:sample/avatars" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -139,18 +81,18 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="#8BC34A"
         android:src="@drawable/ic_baseline_camera_alt_24"
         app:layout_constraintBottom_toBottomOf="@+id/imgCvAlumni"
-        app:layout_constraintEnd_toEndOf="@id/imgCvAlumni" />
+        app:layout_constraintEnd_toEndOf="@+id/imgCvAlumni" />
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:background="#8BC34A"
         android:text="@string/save"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"

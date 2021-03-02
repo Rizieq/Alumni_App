@@ -22,10 +22,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.orhanobut.hawk.Hawk
 import com.project.alumniapp.R
 import com.project.alumniapp.model.ResponseUserEdit
-import com.project.alumniapp.ui.profile.ProfileActivity
-import kotlinx.android.synthetic.main.activity_profile.*
-import kotlinx.android.synthetic.main.activity_profile.fieldGraduationYear
-import kotlinx.android.synthetic.main.activity_profile.view.*
+import com.project.alumniapp.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.botom_sheet_edit.*
 import kotlinx.android.synthetic.main.botom_sheet_edit.view.*
 import okhttp3.MediaType
@@ -73,8 +70,8 @@ class BottomSheetEdit: BottomSheetDialogFragment(), EditProfileContract.View {
 
 
     private fun uploadImage() {
-        val bioProfile: String = fieldBio.getText().toString()
-        val graduationYear: String = fieldGraduationYear.getText().toString()
+        val bioProfile: String = fieldEmail.getText().toString()
+        val graduationYear: String = fieldNoHandphone.getText().toString()
         val token: String = Hawk.get("token")
 
 
@@ -246,12 +243,8 @@ class BottomSheetEdit: BottomSheetDialogFragment(), EditProfileContract.View {
 
     override fun showEditProfileSuccess(data: ResponseUserEdit) {
         Toast.makeText(context,"Edit Sucessfully!",Toast.LENGTH_SHORT).show()
-        startActivity(Intent(context,ProfileActivity::class.java))
-//        fieldName.setText(data.name)
-//        fieldEmail.setText(data.email)
-//        fieldNoHandphone.setText(data.noHandphone)
-//        fieldPassword.setText(data.password)
-//        fieldGraduationYear.setText(data.tahunAlumni)
+        startActivity(Intent(context,ProfileFragment::class.java))
+
     }
 
 

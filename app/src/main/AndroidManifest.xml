@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlumniApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".fragment.HomeAlumniActivity"
+            android:label="@string/title_activity_main"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".ui.listAlumni.ListAlumniActivity" />
         <activity android:name=".ui.SplashScreenActivity">
             <intent-filter>
